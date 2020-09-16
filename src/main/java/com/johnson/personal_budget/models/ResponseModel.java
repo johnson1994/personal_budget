@@ -1,5 +1,7 @@
 package com.johnson.personal_budget.models;
 
+import lombok.Data;
+
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -7,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @param <T>
  */
+@Data
 public class ResponseModel<T> {
 
     public enum ResponseCode {
