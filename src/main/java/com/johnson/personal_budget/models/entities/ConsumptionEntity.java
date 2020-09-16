@@ -12,7 +12,6 @@ public class ConsumptionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "consumptionId", nullable = false, updatable = false)
     private Long consumptionId;
     private String content;             // 消费内容
     private BigDecimal amount;          // 消费金额

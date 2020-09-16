@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/hello")
 @RestController()
-public class HelloController {
+public class ConsumptionController {
 
     @Autowired
     private ConsumptionService consumptionService;
@@ -23,7 +23,7 @@ public class HelloController {
      * @return 消费记录页
      */
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseModel<Page<ConsumptionEntity>> consumptionPage(@PageableDefault(page = 1, size = 10) Pageable pageable) {
+    public ResponseModel<Page<ConsumptionEntity>> consumptionPage(@PageableDefault(page = 0, size = 10) Pageable pageable) {
         Page<ConsumptionEntity> consumptionPage = consumptionService.findAll(pageable);
         return ResponseModel.success(consumptionPage);
     }
