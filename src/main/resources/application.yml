@@ -17,11 +17,13 @@ spring:
       allow_unquoted_control_chars: true
       #允许出现单引号
       allow_single_quotes: true
+    time-zone: GMT+8
 
   jpa:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/personal_budget
+    url: jdbc:mysql://127.0.0.1:3306/personal_budget?serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false
     username: root
     password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
