@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Data
 @Entity
-public class ConsumptionEntity {
+public class ConsumptionEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,9 +23,8 @@ public class ConsumptionEntity {
     private String source;              // 消费记录来源(保留, 日后使用)
     @Column(length = 20)
     private String channel;             // 支付渠道
-    @Column(columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP ")
-    private Date date;                  // 消费日期
-    private Long personId;              // 用户ID
+    @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ")
+    private Date billDate;              // 账单日期
     private Long consumeTypeId;         // 消费类型ID
 
 }
