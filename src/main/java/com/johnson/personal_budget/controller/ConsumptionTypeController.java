@@ -1,7 +1,7 @@
 package com.johnson.personal_budget.controller;
 
 import com.johnson.personal_budget.models.ResponseModel;
-import com.johnson.personal_budget.models.entities.ConsumptionTypeEntity;
+import com.johnson.personal_budget.models.entities.consumption.ConsumptionTypeEntity;
 import com.johnson.personal_budget.service.ConsumptionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

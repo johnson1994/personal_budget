@@ -1,13 +1,14 @@
-package com.johnson.personal_budget.models.entities;
+package com.johnson.personal_budget.models.entities.consumption;
 
 
+import com.johnson.personal_budget.models.entities.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Data
 @Entity
-public class ConsumptionTypeEntity extends BaseEntity{
+public class ConsumptionTypeEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

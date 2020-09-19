@@ -1,11 +1,15 @@
-package com.johnson.personal_budget.models.entities;
+package com.johnson.personal_budget.models.entities.consumption;
 
+import com.johnson.personal_budget.models.entities.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * 消费对象
+ */
 @Data
 @Entity
 public class ConsumptionEntity extends BaseEntity {

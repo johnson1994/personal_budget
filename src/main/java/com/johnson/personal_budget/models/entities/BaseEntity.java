@@ -10,6 +10,9 @@ import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 基础对象
+ */
 @Data
 @MappedSuperclass
 public class BaseEntity implements Serializable {

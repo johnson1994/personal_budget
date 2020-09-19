@@ -1,6 +1,6 @@
 package com.johnson.personal_budget.service;
 
-import com.johnson.personal_budget.models.entities.ConsumptionTypeEntity;
+import com.johnson.personal_budget.models.entities.consumption.ConsumptionTypeEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
