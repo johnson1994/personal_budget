@@ -25,6 +25,9 @@ public class ConsumptionEntity extends BaseEntity {
     private String channel;             // 支付渠道
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ")
     private Date billDate;              // 账单日期
-    private Long consumeTypeId;         // 消费类型ID
+
+    @ManyToOne()
+    @JoinColumn(name = "consumptionTypeId", nullable = false)
+    private ConsumptionTypeEntity consumptionType;  // 消费类型
 
 }

@@ -6,10 +6,11 @@ import com.johnson.personal_budget.service.ConsumptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/hello")
+@RequestMapping("/budget/api/consumption")
 @RestController()
 public class ConsumptionController {
 
@@ -18,12 +19,12 @@ public class ConsumptionController {
 
     /**
      * 分页查询消费记录
-     *
+     *consumptionId
      * @param pageable 分页对象
      * @return 消费记录页
      */
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseModel<Page<ConsumptionEntity>> consumptionPage(@PageableDefault(page = 0, size = 10) Pageable pageable) {
+    public ResponseModel<Page<ConsumptionEntity>> consumptionPage(@PageableDefault(page = 0, size = 10,sort = "consumptionId", direction = Sort.Direction.DESC) Pageable pageable) {
         Page<ConsumptionEntity> consumptionPage = consumptionService.findAll(pageable);
         return ResponseModel.success(consumptionPage);
     }

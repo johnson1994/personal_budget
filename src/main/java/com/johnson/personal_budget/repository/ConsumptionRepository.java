@@ -9,6 +9,6 @@ public interface ConsumptionRepository extends CrudRepository<ConsumptionEntity,
 
     Page<ConsumptionEntity> findAll(Pageable pageable);
 
-    ConsumptionEntity findByConsumptionId(long consumptionId);
+    ConsumptionEntity findByConsumptionId(Long consumptionId);
 
 }
