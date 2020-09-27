@@ -25,7 +25,7 @@ public class BillEntity extends BaseEntity {
     @Column(length = 255)
     private String remark;                      // 备注（用户自己添加）
     @Convert(converter = PeriodTypeConverter.class)
-    @Column(columnDefinition = "TINYINT(3) DEFAULT 7 ")
+    @Column(columnDefinition = "TINYINT(1) DEFAULT 7 ")
     private PeriodType periodType;              // 周期类型（周/月/季/年）
     @Column(columnDefinition = "decimal(19,2) DEFAULT 0.00")
     private BigDecimal totalAmount;             // 账单总金额
