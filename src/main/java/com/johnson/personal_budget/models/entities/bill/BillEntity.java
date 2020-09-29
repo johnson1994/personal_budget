@@ -8,7 +8,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 /**
  * 账单对象
@@ -30,7 +30,7 @@ public class BillEntity extends BaseEntity {
     @Column(columnDefinition = "decimal(19,2) DEFAULT 0.00")
     private BigDecimal totalAmount;             // 账单总金额
     @OneToMany(targetEntity = SubBillEntity.class)
-    private List<SubBillEntity> subBillList;    // 子账单列表
+    private Set<SubBillEntity> subBillSet;    // 子账单列表
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ")
     private Date startDate;                     // 账单开始日期
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ")
