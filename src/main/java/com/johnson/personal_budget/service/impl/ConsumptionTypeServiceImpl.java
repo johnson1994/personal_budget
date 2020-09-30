@@ -22,6 +22,6 @@ public class ConsumptionTypeServiceImpl implements ConsumptionTypeService {
 
     @Override
     public List<ConsumptionTypeEntity> findAll() {
-        return consumptionTypeRepository.findByStatus(EntityStatus.ON);
+        return (List<ConsumptionTypeEntity>) consumptionTypeRepository.findAllByStatus(EntityStatus.ON);
     }
 }
