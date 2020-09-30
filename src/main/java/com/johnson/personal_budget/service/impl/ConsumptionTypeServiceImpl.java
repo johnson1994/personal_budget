@@ -4,9 +4,9 @@ import com.johnson.personal_budget.models.entities.consumption.ConsumptionTypeEn
 import com.johnson.personal_budget.repository.ConsumptionTypeRepository;
 import com.johnson.personal_budget.service.ConsumptionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ConsumptionTypeServiceImpl implements ConsumptionTypeService {
@@ -20,7 +20,7 @@ public class ConsumptionTypeServiceImpl implements ConsumptionTypeService {
     }
 
     @Override
-    public Page<ConsumptionTypeEntity> findAll(Pageable pageable) {
-        return consumptionTypeRepository.findAll(pageable);
+    public List<ConsumptionTypeEntity> findAll() {
+        return (List<ConsumptionTypeEntity>) consumptionTypeRepository.findAll();
     }
 }
