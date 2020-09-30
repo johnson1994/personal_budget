@@ -1,16 +1,16 @@
 package com.johnson.personal_budget.models.entities.income;
 
 import com.johnson.personal_budget.models.entities.BaseEntity;
+import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
  * 收入对象
  */
+@Data
+@Entity
 public class IncomeEntity extends BaseEntity {
 
     @Id
