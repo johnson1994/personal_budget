@@ -1,6 +1,7 @@
 package com.johnson.personal_budget.service.impl;
 
 import com.johnson.personal_budget.models.entities.consumption.ConsumptionTypeEntity;
+import com.johnson.personal_budget.models.type.EntityStatus;
 import com.johnson.personal_budget.repository.ConsumptionTypeRepository;
 import com.johnson.personal_budget.service.ConsumptionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,6 @@ public class ConsumptionTypeServiceImpl implements ConsumptionTypeService {
 
     @Override
     public List<ConsumptionTypeEntity> findAll() {
-        return (List<ConsumptionTypeEntity>) consumptionTypeRepository.findAll();
+        return consumptionTypeRepository.findByStatus(EntityStatus.ON);
     }
 }

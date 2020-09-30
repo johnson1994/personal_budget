@@ -1,6 +1,7 @@
 package com.johnson.personal_budget.service.impl;
 
 import com.johnson.personal_budget.models.entities.consumption.ConsumptionEntity;
+import com.johnson.personal_budget.models.type.EntityStatus;
 import com.johnson.personal_budget.repository.ConsumptionRepository;
 import com.johnson.personal_budget.service.ConsumptionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,6 @@ public class ConsumptionServiceImpl implements ConsumptionService {
 
     @Override
     public Page<ConsumptionEntity> findAll(Pageable pageable) {
-        return consumptionRepository.findAll(pageable);
+        return consumptionRepository.findAllByStatus(pageable, EntityStatus.ON);
     }
 }

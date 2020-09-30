@@ -1,13 +1,18 @@
 package com.johnson.personal_budget.repository;
 
 import com.johnson.personal_budget.models.entities.consumption.ConsumptionTypeEntity;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import com.johnson.personal_budget.models.type.EntityStatus;
 import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
 
 public interface ConsumptionTypeRepository extends CrudRepository<ConsumptionTypeEntity, Long> {
 
-    Page<ConsumptionTypeEntity> findAll(Pageable pageable);
-
     ConsumptionTypeEntity findByConsumptionTypeId(Long consumptionId);
+
+    List<ConsumptionTypeEntity> findByStatus(EntityStatus status);
+
+    List<ConsumptionTypeEntity> findByStatusNot(EntityStatus status);
+
+
 }
